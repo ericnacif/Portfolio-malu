@@ -1,0 +1,54 @@
+.footer {
+  background-color: #2D2A4A; /* Roxo bem escuro quase preto para contraste */
+  color: white;
+  padding-top: 120px;
+  padding-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Dourado sutil */
+.glow {
+  position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+  width: 100%; height: 600px; background: radial-gradient(circle, rgba(184, 134, 11, 0.15) 0%, rgba(45, 42, 74, 0) 70%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1440px; margin: 0 auto; padding: 0 40px;
+  display: grid; grid-template-columns: 1fr; gap: 80px; position: relative; z-index: 10;
+}
+@media (min-width: 1024px) { .container { grid-template-columns: 2fr 1fr 1fr; } }
+
+.description {
+  color: rgba(176, 196, 222, 0.6); font-size: 1rem; line-height: 1.6; max-width: 360px; margin-top: 24px;
+}
+
+.colTitle {
+  font-weight: 800; font-size: 1.25rem; color: white; margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.1em;
+}
+
+.linkGroup { display: flex; flex-direction: column; gap: 20px; }
+.link {
+  display: flex; align-items: center; gap: 16px; color: rgba(255,255,255,0.7); text-decoration: none; transition: all 0.3s;
+}
+.link:hover { color: #b8860b; transform: translateX(8px); }
+
+.iconBox {
+  background-color: rgba(255,255,255,0.05); padding: 10px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; transition: all 0.3s;
+}
+.link:hover .iconBox { background-color: #b8860b; color: white; }
+
+.socialRow { display: flex; gap: 16px; }
+.socialBtn {
+  width: 56px; height: 56px; background-color: rgba(255,255,255,0.05); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; transition: all 0.3s; color: white;
+}
+.socialBtn:hover { background-color: #6a5acd; transform: translateY(-4px); box-shadow: 0 10px 20px -5px rgba(106, 90, 205, 0.4); }
+
+.copyright {
+  max-width: 1440px; margin: 100px auto 0; padding: 32px 40px 0;
+  border-top: 1px solid rgba(255,255,255,0.05); text-align: center;
+  font-size: 0.875rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase;
+}
